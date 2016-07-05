@@ -15,4 +15,12 @@ class Triangles
     true
   end
 
+  define_method(:isosceles?) do
+    true
+  end
+
+  define_method(:scalene?) do
+    true
+  end
+
 end

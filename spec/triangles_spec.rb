@@ -15,4 +15,18 @@ describe (Triangles) do
     expect(test_triangles.equilateral?()).to(eq(true))
     end
   end
+
+  describe("#isosceles?") do
+    it("returns true if all sides are equal") do
+    test_triangles = Triangles.new(3, 3, 5)
+    expect(test_triangles.isosceles?()).to(eq(true))
+    end
+  end
+
+  describe("#scalene?") do
+    it("returns true if NO sides are equal") do
+    test_triangles = Triangles.new(3, 6, 5)
+    expect(test_triangles.scalene?()).to(eq(true))
+    end
+  end
 end
