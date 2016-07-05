@@ -8,6 +8,12 @@ describe(Triangles) do
     test_triangles = Triangles.new(3, 2, 7)
     expect(test_triangles.triangles?()).to(eq(false))
     end
+
+    it("returns true if the sum of the lengths of any two sides of a triangle
+    is greater than the length of the third side and no sides are equal") do
+    test_triangles = Triangles.new(3, 2, 7)
+    expect(test_triangles.triangles?()).to(eq(true))
+    end
   end
 
   describe("#equilateral?") do

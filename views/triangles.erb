@@ -1,7 +1,7 @@
 <h1>Is it an equilateral, an isoscele, a scalene or not a triangle?</h1>
 
 
-<% if @triangles.triangles?() %>
+<% if @triangles.triangles?() == false %>
   <h5> It is not a triangle!</h5>
 <% end %>
 <% if @triangles.equilateral?() %>
@@ -10,6 +10,6 @@
 <% if @triangles.isosceles?() %>
   <h5> It is an isosceles!</h5>
 <% end %>
-<% if @triangles.scalene?() %>
+<% if @triangles.triangles?() == true && @triangles.scalene?() %>
   <h5> It is a scalene!</h5>
 <% end %>
