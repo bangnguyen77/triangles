@@ -8,4 +8,11 @@ describe (Triangles) do
     expect(test_triangles.triangles?()).to(eq(false))
     end
   end
+
+  describe("#equilateral?") do
+    it("returns true if all sides are equal") do
+    test_triangles = Triangles.new(3, 3, 3)
+    expect(test_triangles.equilateral?()).to(eq(true))
+    end
+  end
 end

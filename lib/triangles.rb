@@ -11,4 +11,8 @@ class Triangles
     false
   end
 
+  define_method(:equilateral?) do
+    true
+  end
+
 end
