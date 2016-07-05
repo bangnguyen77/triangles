@@ -1,5 +1,3 @@
-
-
 class Triangles
   define_method(:initialize) do |side1, side2, side3|
     @side1 = side1
@@ -8,19 +6,26 @@ class Triangles
   end
 
   define_method(:triangles?) do
-    false
+    if (@side1 + @side2) <= @side3 || (@side2 + @side3) <= @side1 || (@side3 + @side1) <= @side2
+      return false
+    end
   end
 
   define_method(:equilateral?) do
-    true
+    if @side1 == @side2 && @side2 == @side3
+      return true
+    end
   end
 
   define_method(:isosceles?) do
-    true
+    if @side1 == @side2 && @side2 != @side3
+      return true
+    end
   end
 
   define_method(:scalene?) do
-    true
+    if @side1 != @side2 && @side2 != @side3 && @side1 != @side3
+      return true
+    end
   end
-
 end

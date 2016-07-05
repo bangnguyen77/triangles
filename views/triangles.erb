@@ -1,0 +1,15 @@
+<h1>Is it an equilateral, an isoscele, a scalene or not a triangle?</h1>
+
+
+<% if @triangles.triangles?() %>
+  <h5> It is not a triangle!</h5>
+<% end %>
+<% if @triangles.equilateral?() %>
+  <h5> It is an equilateral!</h5>
+<% end %>
+<% if @triangles.isosceles?() %>
+  <h5> It is an isosceles!</h5>
+<% end %>
+<% if @triangles.scalene?() %>
+  <h5> It is a scalene!</h5>
+<% end %>
